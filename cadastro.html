@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Cadastro</title>
+   
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="cadastro.css" rel="stylesheet">
+    <link rel="stylesheet"" href="navbar.css">
+
+  </head>
+<body>
+
+  <!--nav bar-->
+
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">          
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="index.html">Pagina Principal</a>
+            <a class="nav-link" href="login.html">Login</a>
+            <a class="nav-link" href="#">Fale conosco</a>
+          </nav>
+        </div>
+
+<!--Fim nav bar-->
+
+<div>
+  
+<h1 class="cad" >
+  
+  Cadastro
+</h1>
+
+</div>
+
+
+<!--Div cadastro -->
+
+<div class="extern">
+          <form class="validation" novalidate>
+                <label for="nome">Nome</label>
+                <form method ="post" action="cadastro.php"><input type="text" class="form-control" id="nome" placeholder="Insira o Seu nome" value="" required>
+
+                <label for="sobrenome">Sobrenome</label>
+                <form method ="post" action="cadastro.php"><input type="text" class="form-control" id="sobrenome"
+                placeholder="Insira o seu Sobrenome" 
+                value=""required>
+
+                <label for="email">Email</label>
+                <form method ="post" action="cadastro.php"><input type="text" class="form-control" id="email"
+                placeholder="Insira o seu email" 
+                value=""required>
+
+                <label for="senha">Senha</label>
+                <form method ="post" action="cadastro.php"><input type="password" class="form-control" id="senha"
+                placeholder="Insira a sua senha" 
+                value=""required>
+              </div>
+
+              <!--botao -->
+
+
+            <form method="post" action="cadastro.php">
+            <button class="btn btn-primary btn-lg btn-block" input type="submit">Cadastrar</button>
+          </form>
+
+
+        </body>
+</html>

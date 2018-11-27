@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Login</title>
+   
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
+    <link rel="stylesheet"" href="navbar.css">
+
+  </head>
+<body>
+
+
+
+
+  <!--nav bar-->
+
+  <div class="cover-container d-flex w-100 h-100 p-1 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">          
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="index.html">Pagina Principal</a>
+            <a class="nav-link" href="cadastro.html">Cadastro</a>
+            <a class="nav-link" href="#">Fale conosco</a>
+          </nav>
+        </div>
+
+<!--Fim nav bar-->
+
+
+  <div class="extern">
+          <form class="validation" novalidate>
+            <form method="POST" action="login.php">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" id="email" placeholder="email" value="" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" class="form-control" id="senha" placeholder="Senha " value="" required>
+
+
+ <!--botao -->
+
+<hr class="mb-4">
+            <form method="post" action="processa.php">
+            <button class="btn btn-primary btn-lg btn-block" input type="submit" value"entrar" id="entrar" name="entrar">Entrar</button>
+          </form>
+
+
+
+  </body>
+
+
+ 
+      
+</html>
