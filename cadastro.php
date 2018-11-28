@@ -1,16 +1,29 @@
 <?php 
- 
+
+function Connect(){
+ try {
+     $conn = new PDO('mysql:host=localhost;dbname=bdpim', 'root','');
+     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);    
+     return $conn;
+    } catch(PDOException $e) {
+      echo 'ERROR: ' . $e->getMessage();
+      return null;
+   }
+}
+
 $nome = $_POST['nome'];
 $sobrenome = $_POST['sobrenome'];
 $email = $_POST['email'];
 $senha = MD5($_POST['senha']);
-$connect = mysql_connect('localhost','root','');
-$db = mysql_select_db('bdpim');
-$query_select = "SELECT email FROM usuarios WHERE email = '$email'";
-$select = mysql_query($query_select,$connect);
-$array = mysql_fetch_array($select);
-$logarray = $array['email'];
- 
+$conn = Connect();
+if($conn){
+  $stmt = $conn->prepare('SELECT email FROM usuarios WHERE email = :email');
+  $stmt->execute(array('email' => $email));
+  while($registro = $stmt->fetch()) {
+        $logarray = $array['email'];
+    }
+}
+
   if($email == "" || $email == null){
     echo"<script language='javascript' type='text/javascript'>alert('O campo nome deve ser preenchido');window.location.href='cadastro.html';</script>";
  
